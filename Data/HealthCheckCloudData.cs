@@ -332,6 +332,10 @@ namespace PingCastleCloud.Data
         public bool UsersPermissionToCreateLOBAppsEnabled { get; set; }
         public bool UsersPermissionToReadOtherUsersEnabled { get; set; }
         public bool UsersPermissionToUserConsentToAppEnabled { get; set; }
+
+        public string PolicyGuestUserRoleId { get; set; }
+        public bool? PolicyAllowEmailVerifiedUsersToJoinOrganization { get; set; }
+
         public List<HealthCheckCloudDataForwardingMailboxes> ForwardingMailboxes { get; set; }
         public int GlobalScore { get; set; }
         public int MaturityLevel { get; set; }

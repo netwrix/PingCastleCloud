@@ -92,6 +92,10 @@
     <Compile Include="RESTServices\Azure\ProvisioningApi.cs" />
     <Compile Include="RESTServices\RESTClientBase.cs" />
     <Compile Include="Credentials\CertificateCredential.cs" />
+    <Compile Include="Rules\GuestUserAccessRestriction2.cs" />
+    <Compile Include="Rules\GuestUserAccessRestriction1.cs" />
+    <Compile Include="Rules\UserRegisterApplications.cs" />
+    <Compile Include="Rules\UserConsentCompanyData.cs" />
     <Compile Include="Rules\ADConnectVersion1.cs" />
     <Compile Include="Tokens\ChallengeResponse.cs" />
     <Compile Include="Tokens\CookieManager.cs" />
@@ -109,11 +113,6 @@
     <Compile Include="Rules\CustomRulesSettings.cs" />
     <Compile Include="Rules\RuleAttribute.cs" />
     <Compile Include="Rules\RuleBase.cs" />
-    <Compile Include="Rules\RuleDescription.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RuleDescription.resx</DependentUpon>
-    </Compile>
     <Compile Include="Rules\RuleSet.cs" />
     <Compile Include="Tasks.cs" />
     <Compile Include="Template\TemplateManager.cs" />
@@ -126,8 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules\RuleDescription.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>RuleDescription.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\AuthenticationDialog.resx">

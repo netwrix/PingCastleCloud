@@ -16,7 +16,7 @@ using System.Web;
 
 namespace PingCastleCloud.RESTServices
 {
-    [AzureService("535fb089-9ff3-47b6-9bfb-4f1264799865", "https://graph.microsoft.com")]
+    [AzureService("1b730954-1685-4b74-9bfd-dac224a7b894", "https://graph.microsoft.com")]
     public class MicrosoftGraph : RESTClientBase<MicrosoftGraph>, IAzureService
     {
         public MicrosoftGraph(IAzureCredential credential) : base(credential)
@@ -32,15 +32,45 @@ namespace PingCastleCloud.RESTServices
             return builder.ToString();
         }
 
-        public string GetMe()
+        public GraphAPI.User GetMe()
         {
-            return CallEndPoint<string>("me");
+            return CallEndPoint<GraphAPI.User>("me");
+        }
+
+        public List<AuthorizationPolicy> GetAuthorizationPolicy()
+        {
+            return CallEndPointWithPaggingAsync<object, AuthorizationPolicy>("policies/authorizationPolicy", null).GetAwaiter().GetResult();
         }
 
         // message=Insufficient privileges to complete the operation.
         public string GetTenantRelationships(string tenantId)
         {
             return CallEndPoint<string>("tenantRelationships/findTenantInformationByTenantId(tenantId='" + tenantId + "')");
+        }
+
+        public class AuthorizationPolicy
+        {
+            public string id { get; set; }
+            public string allowInvitesFrom { get; set; }
+            public bool allowedToSignUpEmailBasedSubscriptions { get; set; }
+            public bool allowedToUseSSPR { get; set; }
+            public bool allowEmailVerifiedUsersToJoinOrganization { get; set; }
+            public bool blockMsolPowerShell { get; set; }
+            public string description { get; set; }
+            public string displayName { get; set; }
+            public List<object> enabledPreviewFeatures { get; set; }
+            public string guestUserRoleId { get; set; }
+            public List<string> permissionGrantPolicyIdsAssignedToDefaultUserRole { get; set; }
+            public UserRolePermissions defaultUserRolePermissions { get; set; }
+        }
+
+        public class UserRolePermissions
+        {
+            public bool allowedToCreateApps { get; set; }
+            public bool allowedToCreateSecurityGroups { get; set; }
+            public bool allowedToCreateTenants { get; set; }
+            public bool allowedToReadBitlockerKeysForOwnedDevice { get; set; }
+            public bool allowedToReadOtherUsers { get; set; }
         }
     }
 }

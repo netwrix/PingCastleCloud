@@ -219,7 +219,7 @@ namespace PingCastleCloud
             return true;
         }
 
-        const string basicEditionLicense = "PC2H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/In7NX+PX+DV+A/r/r/F7/nf/y/E/+m//mr82/drS/5/9GvWvkdN/6a9x+mvMfo2CPit+jerXWNLf1a9xTv++pL+Xv8bFr3Hya2S/RkPfltx279cY/xq7v8YO/btDf23T/19Q+5Z+ntPPmn5O6eeC/svprynByOjN9NdYE4z81wAaf9Cv8Wv8Gr/G7/Sn/jb/yh/67+R/SvL3/a9/4R/9F/9j//m/+uf+bqtf8J/8wskf80v+gu/+1v/e3/3yfzj9hf/ZF//HL/v9/vzf/S/O/ozf/2/9q17/y3/Qt36/v+Uf+11+q8e/8f/RFn/E3/vb/cPlT/1P//Cf9OPlP3H4Z/57v8bf/M9s/aK/47f6w7df/BG/8t/8U/6sp//Cf/pbfvVPfHr4t/yVP/hXfvvZr//X/zWXf0b7r/8rf9K/+Auyv+uf+XP+mfkf+ff+c7/L/wNcbrwUFAEAAA==";
+        const string basicEditionLicense = "PC2H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/In7NX+PX+DV+A/r/r/F7/g/Lf+v1v/Nr/tr068/Q/5/9GvWvkdN/6a9x+mvMfo3i12jp/9WvsaS/q1/jnP59SX8vf42LX+Pk18h+jYa+LantCf1b/Rprap/+Gru/xvjX2OH/p7/GNv3/BX3T0s9z+lnTzyn9XNB/Of01JVgZvZvSu82vkf8aQOcP+jV+jV/j1/7Ff9N/9i//Br/Hm3/37/on/4Lf+w/+k/+Kv+M/+c/+xeR//DP++U/+qn/iP9j/Lf62v/Ojv+DP+Wf/x//wJ37v5W99/p/+dn/WP/BPFP/323/wL/grR3/H3/e3PTj7p3+T13/er9y5m/0+f8PlH3v36X/76u5f9OS3/GP+9v/58tWf9E//Le2v8Ut/WfK3/FH/+O/wj/4F9/+gf+lP/1+//D9//7/uv/iVZ82f8zv9Cb/rn/0n/xl/8m/y2/+1v+/fOBv9Of8Pw8+pIRwBAAA=";
         string _serialNumber;
         public string GetSerialNumber()
         {

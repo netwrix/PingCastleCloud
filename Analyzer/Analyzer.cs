@@ -336,6 +336,16 @@ namespace PingCastleCloud.Analyzer
                     ExtractNetworkPolicy(policy);
                 }
             }
+
+            var ms = new MicrosoftGraph(new PRTCredential());
+            var authorizationPolicies = ms.GetAuthorizationPolicy();
+            if (authorizationPolicies != null && authorizationPolicies.Count > 0)
+            {
+                var authorizationPolicy = authorizationPolicies[0];
+                data.PolicyGuestUserRoleId = authorizationPolicy.guestUserRoleId;
+                data.PolicyAllowEmailVerifiedUsersToJoinOrganization = authorizationPolicy.allowEmailVerifiedUsersToJoinOrganization;
+            }
+
         }
 
         private void ExtractNetworkPolicy(GraphAPI.PolicyResponse policy)
