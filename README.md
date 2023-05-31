@@ -1,5 +1,9 @@
 # Ping Castle Cloud
 
+important: the source code has been moved to the main PingCastle project.
+this project is now archived.
+
+
 ## Introduction
 
 Ping Castle Cloud is a tool designed to assess quickly the AzureAD security level with a methodology based on risk assessment and a maturity framework.
